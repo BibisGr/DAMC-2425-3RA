@@ -1,0 +1,51 @@
+<div class="container border">
+  <h1>Nombre: {{name}}</h1>
+  <h1>Dir: {{address}}</h1>
+  <h1>Edad: {{edad}}</h1>
+  <h1>Altura: {{altura}}</h1>
+  <h1>Bool: {{EsCasado}}</h1>
+  <h1>Array: {{frutas}}</h1>
+  <h1>Objeto FrutaName: {{fruta.nombre}}</h1>
+  <h1>Objeto FrutaColor: {{fruta.color}}</h1>
+  <h1>Objeto FrutaPrice: {{fruta.precio}}</h1>
+
+  @if (EsCasado) {
+  <h1>Esta Casado</h1>
+  } @else {
+  <h1>No esta casado</h1>
+  }
+
+  <div class="container">
+    <button class="btn btn-primary" (click)="masUno()">Más Uno +</button>
+    <button class="btn btn-primary" (click)="cambiaNombre()">Cambia nombre +</button>
+    <button class="btn btn-primary" (click)="cambiaNombre()">Cambia nombre +</button>
+    <button class="btn btn-primary" (click)="casadoY()">Casado SI</button>
+    <button class="btn btn-primary" (click)="casadoN()">Casado NO</button>
+  </div>
+
+  <div class="container d-flex justify-content-around m-5 p-3">
+    @for (item of frutas; track item) {
+    <h2 class="border m-2">{{item}}</h2>
+    }
+  </div>
+  <div class="container d-flex justify-content-around m-5 p-3">
+
+    @for (fruta of ArrayFrutas; track fruta) {
+    <div class="card m-3" style="width: 18rem;">
+      <div class="card-header">
+        {{fruta.nombre}}
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{fruta.color}}</li>
+        <li class="list-group-item">{{fruta.precio}}</li>
+      </ul>
+    </div>
+    <!-- <h2>Fruta: {{fruta.nombre}}</h2>
+      <h3>Color: {{fruta.color}}</h3>
+      <h4>Precio: {{fruta.precio}}</h4> -->
+    }
+  </div>
+
+  <!--<h1>{{}}</h1>
+  <h1>{{}}</h1> -->
+</div>
