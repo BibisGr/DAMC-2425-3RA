@@ -6,6 +6,7 @@ import { JugadorComponent } from './componentes/jugador/jugador.component';
 import { JugadoresComponent } from './componentes/jugadores/jugadores.component';
 import { AboutComponent } from './componentes/about/about.component';
 import { ContactComponent } from './componentes/contact/contact.component';
+import { PageNotFoundComponent } from './componentes/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -15,7 +16,8 @@ export const routes: Routes = [
   {path: 'jugadores', component: JugadoresComponent},
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
-  {path: '', redirectTo: '/home', pathMatch: 'full'}
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '**', component: PageNotFoundComponent}
 
   //agregar el 404
 ];

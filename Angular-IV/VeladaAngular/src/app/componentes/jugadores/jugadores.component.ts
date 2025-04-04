@@ -1,3 +1,4 @@
+import { Player } from './../../common/player';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,5 +8,50 @@ import { Component } from '@angular/core';
   styleUrl: './jugadores.component.css'
 })
 export class JugadoresComponent {
+
+  superheroes= {
+     NombreSquad: 'Los Damagers',
+     BaseSecreta: 'PIA08',
+     Active: true,
+     city: 'Valencia',
+     miembro: [
+      {
+        Alias: 'SuperBiker',
+        Nombre: 'Fabrizio',
+        activo: true,
+        poderes:['partir cuellos telemáticamente', 'invisibilidad', 'se prende fuego'],
+        enemigos:['Profesor C', 'El Super K']
+      },
+      {
+        Alias: 'El niño kilo',
+        Nombre: 'Rubén',
+        activo: true,
+        poderes:['super elasticidad', 'aumentar de tamaño', 'inmortalidad'],
+        enemigos:['El Super K']
+      },
+      {
+        Alias: 'Mr Olimplia',
+        Nombre: 'Brian',
+        activo: true,
+        poderes:['Super fuerza', 'Vuelo', 'Rayo laser'],
+        enemigos:['Profesor C']
+      }
+     ],
+     enemigos:[
+      {
+        Alias: 'El super K ',
+        Nombre: 'Carlos',
+        activo: true,
+        poderes:['irrompibilidad', 'Vuelo', 'elasticidad']
+      },
+      {
+        Alias: 'Profesor C',
+        Nombre: 'Oscar',
+        activo: true,
+        poderes:['telepatía', 'telequinesis', 'invisibilidad']
+      }
+     ]
+  }
+
 
 }
