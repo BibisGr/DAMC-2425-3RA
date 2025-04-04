@@ -1,4 +1,4 @@
-<div class="container d-flex jutify-content-between flex-column">
+<!-- <div class="container d-flex jutify-content-between flex-column">
   <h1 class="Display-2 text-center">{{superheroes.NombreSquad}}</h1>
   <h1 class="Display-4 text-center">{{superheroes.BaseSecreta}}</h1>
   <h1 class="Display-4 text-center">{{superheroes.city}}</h1>
@@ -30,4 +30,29 @@
 </div>
 
 
+</div> -->
+
+<div class="container d-flex flex-column">
+  <h1 class="display-2 text-center">EVENTO: {{players.evento}}</h1>
+  <h1 class="display-4 text-center">{{players.fecha}}</h1>
+  <h1 class="display-4 text-center">{{players.ubicacion}}</h1>
+  <h2 class="display-2 text-center m-4">Players</h2>
+  <div class=" container d-flex flex-row flex-wrap justify-content-between">
+
+    @for (player of players.participantes; track $index) {
+      <div class="card m-3" style="width: 15rem;">
+        <img src="{{player.imagen}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{player.alias}}</h5>
+          <p class="card-text">{{player.nombre}}</p>
+          <p class="card-text">{{player.pais}}</p>
+          <p class="card-text">Peso: {{player.peso}}</p>
+          <p class="card-text">{{player.record}}</p>
+          <p class="card-text">{{player.rival}}</p>
+          <a href="#" class="btn btn-primary">Ver Participante</a>
+        </div>
+      </div>
+    }
+
+  </div>
 </div>
